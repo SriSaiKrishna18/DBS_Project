@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .login-container {
+            display: flex;
+            height: 100vh;
+        }
+        
+        .login-image {
+            flex: 1;
+            background: url('img3.jpeg') no-repeat center center;
+            background-size: cover;
+        }
+        
+        .login-form {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+        
+        .login-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            padding: 2rem;
+            width: 100%;
+            max-width: 400px;
+        }
+        
+        .login-logo {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .login-form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .login-form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .login-form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #3f72af;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .login-btn:hover {
+            background-color: #305a8d;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-image"></div>
+        <div class="login-form">
+            <div class="login-card">
+                <div class="login-logo">
+                    <h1>Student Portal</h1>
+                </div>
+                <form id="loginForm">
+                    <div class="login-form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="login-form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="login-btn">Login</button>
+                </form>
+                <p style="text-align: center; margin-top: 1rem;">
+                    <a href="#">Forgot password?</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+            window.location.href = "index.html";
+        });
+    </script>
+</body>
+</html>

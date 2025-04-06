@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar/Dashboard -->
+        <div class="sidebar">
+            <div class="logo">
+                <h2>Student Portal</h2>
+            </div>
+            <div class="dashboard">
+                <ul>
+                    <li class="dashboard-item" data-page="home">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </li>
+                    <li class="dashboard-item" data-page="attendance">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Attendance</span>
+                    </li>
+                    <li class="dashboard-item" data-page="courses">
+                        <i class="fas fa-book"></i>
+                        <span>Courses</span>
+                    </li>
+                    <li class="dashboard-item" data-page="results">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Results</span>
+                    </li>
+                    <li class="dashboard-item" data-page="analysis">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Analysis</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="top-bar">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="profile">
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="profile-dropdown">
+                        <img src="img2.png" alt="Profile">
+                        <span>Kaushal Murthy</span>
+                        <i class="fas fa-chevron-down"></i>
+                        <div class="dropdown-content">
+                            <a href="#"><i class="fas fa-user"></i> My Profile</a>
+                            <a href="#"><i class="fas fa-cog"></i> Settings</a>
+                            <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content" id="home">
+                <div class="welcome-section">
+                    <div class="welcome-text">
+                        <h1>Welcome, <span class="highlight">Mr.Kaushal Murthy!</span></h1>
+                        <p>Your academic journey is progressing well. Keep up the good work!</p>
+                        <div class="stats">
+                            <div class="stat-item">
+                                <h3>87%</h3>
+                                <p>Attendance</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>8.3</h3>
+                                <p>GPA</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>7</h3>
+                                <p>Active Courses</p>
+                            </div>
+                        </div>
+                        <button class="btn-primary">View Dashboard</button>
+                    </div>
+                    <div class="welcome-image">
+                        <img src="img1.png" alt="Student">
+                    </div>
+                </div>
+
+                <div class="quick-access">
+                    <h2>Quick Access</h2>
+                    <div class="cards">
+                        <div class="card">
+                            <i class="fas fa-tasks"></i>
+                            <h3>Assignments</h3>
+                            <p>3 pending</p>
+                        </div>
+                        <div class="card">
+                            <i class="fas fa-file-alt"></i>
+                            <h3>Exams</h3>
+                            <p>Next: May 15</p>
+                        </div>
+                        <div class="card">
+                            <i class="fas fa-calendar"></i>
+                            <h3>Events</h3>
+                            <p>2 upcoming</p>
+                        </div>
+                        <div class="card">
+                            <i class="fas fa-comments"></i>
+                            <h3>Messages</h3>
+                            <p>5 unread</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page content that will be dynamically loaded -->
+            <div class="content hidden" id="attendance">
+                <h1>Attendance Overview</h1>
+                <div class="attendance-summary">
+                    <div class="summary-card">
+                        <h2>Overall Attendance</h2>
+                        <div class="progress-circle">
+                            <div class="progress-value">87%</div>
+                        </div>
+                    </div>
+                    <div class="attendance-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Course</th>
+                                    <th>Total Classes</th>
+                                    <th>Attended</th>
+                                    <th>Percentage</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Computer Science</td>
+                                    <td>24</td>
+                                    <td>22</td>
+                                    <td>91.7%</td>
+                                </tr>
+                                <tr>
+                                    <td>Mathematics</td>
+                                    <td>20</td>
+                                    <td>18</td>
+                                    <td>90%</td>
+                                </tr>
+                                <tr>
+                                    <td>Physics</td>
+                                    <td>18</td>
+                                    <td>14</td>
+                                    <td>77.8%</td>
+                                </tr>
+                                <tr>
+                                    <td>English</td>
+                                    <td>15</td>
+                                    <td>13</td>
+                                    <td>86.7%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content hidden" id="courses">
+                <h1>Your Courses</h1>
+                <div class="courses-grid">
+                    <div class="course-card">
+                        <div class="course-header blue">
+                            <h3>Computer Science 101</h3>
+                            <p>Prof. Michael Stevens</p>
+                        </div>
+                        <div class="course-body">
+                            <p><strong>Schedule:</strong> Monday, Wednesday 10:00 AM</p>
+                            <p><strong>Room:</strong> CS-201</p>
+                            <p><strong>Progress:</strong> 65%</p>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 65%"></div>
+                            </div>
+                        </div>
+                        <div class="course-footer">
+                            <button class="btn-secondary">View Details</button>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-header green">
+                            <h3>Mathematics Advanced</h3>
+                            <p>Prof. Sarah Johnson</p>
+                        </div>
+                        <div class="course-body">
+                            <p><strong>Schedule:</strong> Tuesday, Thursday 11:30 AM</p>
+                            <p><strong>Room:</strong> MA-105</p>
+                            <p><strong>Progress:</strong> 78%</p>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 78%"></div>
+                            </div>
+                        </div>
+                        <div class="course-footer">
+                            <button class="btn-secondary">View Details</button>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-header purple">
+                            <h3>Physics Mechanics</h3>
+                            <p>Prof. Robert Chen</p>
+                        </div>
+                        <div class="course-body">
+                            <p><strong>Schedule:</strong> Monday, Friday 2:00 PM</p>
+                            <p><strong>Room:</strong> PH-302</p>
+                            <p><strong>Progress:</strong> 52%</p>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 52%"></div>
+                            </div>
+                        </div>
+                        <div class="course-footer">
+                            <button class="btn-secondary">View Details</button>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-header orange">
+                            <h3>English Literature</h3>
+                            <p>Prof. Emily Williams</p>
+                        </div>
+                        <div class="course-body">
+                            <p><strong>Schedule:</strong> Wednesday, Friday 9:00 AM</p>
+                            <p><strong>Room:</strong> ENG-110</p>
+                            <p><strong>Progress:</strong> 85%</p>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="course-footer">
+                            <button class="btn-secondary">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content hidden" id="results">
+                <h1>Academic Results</h1>
+                <div class="results-overview">
+                    <div class="semester-selection">
+                        <label for="semester">Select Semester:</label>
+                        <select id="semester">
+                            <option value="current">Current Semester</option>
+                            <option value="fall2023">Fall 2023</option>
+                            <option value="spring2023">Spring 2023</option>
+                            <option value="fall2022">Fall 2022</option>
+                        </select>
+                    </div>
+                    <div class="gpa-card">
+                        <h2>Current GPA</h2>
+                        <div class="gpa-display">3.8</div>
+                        <p>Class Rank: 12 out of 145</p>
+                    </div>
+                    <div class="results-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Course</th>
+                                    <th>Credits</th>
+                                    <th>Grade</th>
+                                    <th>GPA</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Computer Science 101</td>
+                                    <td>4</td>
+                                    <td>A</td>
+                                    <td>4.0</td>
+                                </tr>
+                                <tr>
+                                    <td>Mathematics Advanced</td>
+                                    <td>3</td>
+                                    <td>A-</td>
+                                    <td>3.7</td>
+                                </tr>
+                                <tr>
+                                    <td>Physics Mechanics</td>
+                                    <td>4</td>
+                                    <td>B+</td>
+                                    <td>3.3</td>
+                                </tr>
+                                <tr>
+                                    <td>English Literature</td>
+                                    <td>3</td>
+                                    <td>A</td>
+                                    <td>4.0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content hidden" id="analysis">
+                <h1>Performance Analysis</h1>
+                <div class="analysis-container">
+                    <div class="analysis-card">
+                        <h2>Performance Trend</h2>
+                        <div class="chart-placeholder">
+                            <div class="mock-chart">
+                                <div class="chart-bar" style="height: 65%"></div>
+                                <div class="chart-bar" style="height: 78%"></div>
+                                <div class="chart-bar" style="height: 52%"></div>
+                                <div class="chart-bar" style="height: 85%"></div>
+                                <div class="chart-bar" style="height: 90%"></div>
+                            </div>
+                            <div class="chart-legend">
+                                <span>Sem 1</span>
+                                <span>Sem 2</span>
+                                <span>Sem 3</span>
+                                <span>Sem 4</span>
+                                <span>Current</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="analysis-card">
+                        <h2>Subject Comparison</h2>
+                        <div class="radar-chart-placeholder">
+                            <div class="mock-radar"></div>
+                        </div>
+                    </div>
+                    <div class="analysis-card full-width">
+                        <h2>Academic Recommendations</h2>
+                        <div class="recommendations">
+                            <div class="recommendation-item">
+                                <i class="fas fa-lightbulb"></i>
+                                <div>
+                                    <h3>Improve Physics Performance</h3>
+                                    <p>Consider joining the physics study group that meets on Thursdays.</p>
+                                </div>
+                            </div>
+                            <div class="recommendation-item">
+                                <i class="fas fa-book"></i>
+                                <div>
+                                    <h3>Advanced CS Course</h3>
+                                    <p>Based on your CS performance, you might enjoy taking Advanced Algorithms next semester.</p>
+                                </div>
+                            </div>
+                            <div class="recommendation-item">
+                                <i class="fas fa-users"></i>
+                                <div>
+                                    <h3>Join Math Club</h3>
+                                    <p>Your mathematics skills would make you a valuable addition to the university's Math Club.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
